@@ -1,0 +1,73 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Futura Bk BT";
+    background: url(../img/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 16px;
+}
+
+.reklama-300x250 {
+    margin-bottom: 20px;
+}
+
+a, a:hover, a:focus, a:active, a:visited {
+    color: #ff8c29;
+}
+
+.filter-kategorije .kategorije a.label {
+    color: white;
+}
+
+#wrapper {
+    background-color: rgba(255, 255, 255, 0.61);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+nav.meni {
+}
+nav.meni ul {
+    padding: 0;
+    margin: 0;
+
+}
+nav.meni ul > li {
+    display: inline-block;
+    list-style: none;
+    text-align: left;
+}
+nav.meni ul > li > a{
+    display: block;
+    font-size: 18px;
+    padding: 15px 20px;
+}
+nav.meni ul > li > a:not(.btn){
+    font-family: "Futura Md BT";
+    color: #ff8c29;
+}
+nav.meni ul > li > a:not(.btn):hover{
+    background: #e2e5e7;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.body {
+    padding: 60px 0;
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+header, footer {
+    background-color: rgba(255, 255, 255, 0.76);
+    padding: 10px;
+    border-bottom: 1px solid #e2e5e7;
+}

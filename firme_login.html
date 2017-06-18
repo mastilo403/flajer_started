@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flajer.Me</title>
+
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="logo pull-left">
+                <img src="img/logo-flajer.png" width="280" />
+            </div>
+            <div class="navigacija pull-right">
+                <nav class="meni">
+                    <ul>
+                        <li><a href="#">svi flajeri</a></li>
+                        <li><a href="#">sve firme</a></li>
+                        <li><a href="docs/FLAJER.docx">o projektu</a></li>
+                        <li><a href="#">kontakt</a></li>
+                        <li><a href="#" class="btn btn-info">za korisnike +</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="body">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div id="loginbox" style="" class="mainbox">
+                        <div class="panel panel-info" >
+                            <div class="panel-heading">
+                                <div class="panel-title">Uloguj se (za firme)</div>
+                                <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Zaboravio si lozinku?</a></div>
+                            </div>
+
+                            <div style="padding-top:30px" class="panel-body" >
+
+                                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                                <form id="loginform" class="form-horizontal" role="form">
+
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="korisničko ime">
+                                    </div>
+
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="lozinka">
+                                    </div>
+
+
+
+                                    <div class="input-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input id="login-remember" type="checkbox" name="remember" value="1"> Zapamti me
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+                                    <div style="margin-top:10px" class="form-group">
+                                        <!-- Button -->
+
+                                        <div class="col-sm-12 controls">
+                                            <a id="btn-login" href="#" class="btn btn-success">Uloguj se  </a>
+                                            <a id="btn-fblogin" href="#" class="btn btn-primary">Uloguj se preko Facebook naloga</a>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <div class="col-md-12 control">
+                                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                                Nemaš nalog?
+                                                <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                                    Registruj se ovdje
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="signupbox" style="display:none;" class="mainbox">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title">Registruj se (za firme)</div>
+                                <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Uloguj se</a></div>
+                            </div>
+                            <div class="panel-body" >
+                                <form id="signupform" class="form-horizontal" role="form">
+
+                                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                                        <p>Greška:</p>
+                                        <span></span>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label for="email" class="col-md-3 control-label">Email adresa</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="email" class="form-control" name="email" placeholder="Email Adresa">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-md-3 control-label">Ime</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="firstname" class="form-control" name="firstname" placeholder="Unesi ime">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastname" class="col-md-3 control-label">Prezime</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="lastname" class="form-control" name="lastname" placeholder="Unesi prezime">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="col-md-3 control-label">Lozinka</label>
+                                        <div class="col-md-9">
+                                            <input type="password" id="password" class="form-control" name="passwd" placeholder="Lozinka">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="icode" class="col-md-3 control-label">Kod preporuke</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="icode" class="form-control" name="icode" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <!-- Button -->
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Registruj se</button>
+                                            <span style="margin-left:8px;">ili</span>
+                                        </div>
+                                    </div>
+
+                                    <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>Registruj se preko Facebook naloga</button>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="text-center text-info">Sajt je u fazi izrade. Za sve informacije kontaktirajte me putem email adrese <u>mastiloviczoran@gmail.com</u></p>
+        <p class="text-center text-info">Flajer.me © 2017</p>
+    </footer>
+</div>
+</body>
+</html>
